@@ -1,0 +1,12 @@
+title = 'visual model'
+
+# all paths must be relative to this file and name must match process name in model
+[parameters]
+topology = '../parameters/topology.toml'
+environment = '../parameters/environment.toml'
+phenology = '../parameters/phenology.toml'
+growth = '../parameters/growth.toml'
+appearance = '../parameters/growth.toml'
+light_interception = '../parameters/light_interception.toml'
+harvest = '../parameters/harvest.toml'
+geometry = '../parameters/geometry.toml'

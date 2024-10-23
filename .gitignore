@@ -134,3 +134,5 @@ dmypy.json
 # netcdf - xarray dumps
 *.nc
 *.cdf
+/vmlab/data/trees/backup
+/notebooks/temporary_notebooks

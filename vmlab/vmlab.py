@@ -17,6 +17,7 @@ from importlib import resources
 
 pgl.pglParserVerbose(False)
 
+print('reloaded')
 
 class DotDict(dict):
     def __init__(self, *args, **kwargs):
@@ -136,6 +137,35 @@ def to_graph(df: pd.DataFrame):
 
     return graph
 
+
+def plot_graph(graph, width=500,height=500):
+    """Plot a 2D tree from an igraph
+
+    Parameters
+    ----------
+    graph : :class:`igraph.Graph`
+
+    Returns
+    -------
+    ig.plot 
+    """
+
+    layout = graph.layout_reingold_tilford()
+    layout.rotate(180)
+    return ig.plot(
+        graph, 
+        bbox=(0,0,width,height), 
+        layout=layout, 
+        vertex_label=graph.vs.get_attribute_values('id'), #changement ici de 'name' vers 'id'
+        vertex_label_size=10,
+        vertex_color=['purple' if m == "branch" else 'grey' if n == ("multiple_GU" or "undefined")  else 'pink' if o == ("branch_empty" or "scaffold_empty") else 'orange' if f > 0 else 'yellowgreen' if l > 0 else 'white' for f, l,m,n,o in zip(
+        graph.vs.get_attribute_values('arch_dev__pot_nb_fruit'),
+        graph.vs.get_attribute_values('growth__nb_leaf'),
+        graph.vs.get_attribute_values('type'),
+        graph.vs.get_attribute_values('type'),
+        graph.vs.get_attribute_values('type')
+        )]
+    )
 
 def to_dataframe(graph):
     """Load and validate an pandas DataFrame from an igraph graph

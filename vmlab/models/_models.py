@@ -23,6 +23,17 @@ from ..processes import (
     harvest
 )
 
+visual_model = xs.Model({
+    'environment': environment.Environment,
+    'phenology': phenology.Phenology,
+    'topology': topology.Topology,
+    'geometry': geometry.Geometry,
+    'appearance': appearance.Appearance,
+    'growth': growth.Growth,
+    'arch_dev': arch_dev.ArchDev,
+    'harvest': harvest.Harvest,
+    'light_interception': light_interception.LightInterception
+})
 
 vmango = xs.Model({
     'environment': environment.Environment,
@@ -106,3 +117,4 @@ def longname_model(model):
     for p in process_names:
         processes[longnames[p]] = model[p].__class__
     return xs.Model(processes)
+
