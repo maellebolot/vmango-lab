@@ -138,6 +138,38 @@ def to_graph(df: pd.DataFrame):
     return graph
 
 
+def to_weighted_graph(df: pd.DataFrame):
+    """Load and validate a weighted igraph graph from a pandas DataFrame
+
+    Parameters
+    ----------
+    df : :class:`pandas.DataFrame` object
+        Required format is identical with what is specified for the
+        'tree' input in the vmlab.create_setup function.
+
+    Returns
+    -------
+    graph : :class:`igraph.Graph`
+        The weight between two vertex is the length of the target vertex GU (cm).
+    """
+
+    assert 'id' in df.columns.to_list() and 'parent_id' in df.columns.to_list()
+
+    edges = df[['parent_id', 'id']].dropna().astype(np.int64)
+    vertices = df.drop('parent_id', axis=1) if len(df.columns.to_list()) > 2 else None
+    if vertices is not None:
+        vertices['id'].astype(np.int64, copy=False)
+
+    graph = ig.Graph.DataFrame(edges, vertices=vertices)
+    
+    check_graph(graph)
+    
+    weights = [graph.vs[edge.target]['appearance__final_length_gu'] for edge in graph.es]
+    graph.es['weight'] = weights
+    
+    return graph
+
+
 def plot_graph(graph, width=500,height=500):
     """Plot a 2D tree from an igraph
 

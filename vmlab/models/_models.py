@@ -87,6 +87,25 @@ fruit_model = xs.Model({
     'harvest': harvest.Harvest
 })
 
+# fruit_model_2 = xs.Model({
+#     'environment': environment.Environment,
+#     'phenology': phenology.Phenology,
+#     'topology': topology.Topology,
+#     'geometry': geometry.Geometry,
+#     'appearance': appearance.Appearance,
+#     'growth': growth.Growth,
+#     'arch_dev': arch_dev.ArchDev,
+#     'light_interception': light_interception2.LightInterception,
+#     'photosynthesis': photosynthesis.Photosythesis,
+#     'carbon_flow_coef': carbon_flow_coef.CarbonFlowCoef,
+#     'carbon_reserve': carbon_reserve.CarbonReserve,
+#     'carbon_demand': carbon_demand.CarbonDemand,
+#     'carbon_allocation': carbon_allocation.CarbonAllocation,
+#     'fruit_composition': fruit_composition.FruitComposition,
+#     'fruit_quality': fruit_quality.FruitQuality,
+#     'harvest': harvest.Harvest
+# })
+
 longnames = {
     'environment': 'Environment',
     'phenology': 'Organ Phenology',
@@ -107,7 +126,9 @@ longnames = {
     'carbon_allocation': 'Carbon Allocation',
     'fruit_composition': 'Fruit Composition',
     'fruit_quality': 'Fruit Quality',
-    'harvest': 'Fruit Harvest'
+    'harvest': 'Fruit Harvest',
+    'environment2' : 'Environment with fisheye pictures',
+    'light_interception2': 'Light Interception 2020'
 }
 
 

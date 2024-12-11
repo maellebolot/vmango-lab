@@ -1,0 +1,13 @@
+id,type,parent_id,scaffold_id,topology__is_apical,arch_dev__pot_flowering_date,arch_dev__pot_nb_inflo,arch_dev__pot_nb_fruit,id_fruit,fruit_mass,growth__nb_leaf,growth__radius_gu,appearance__final_length_gu,environment_id,light_interception__sunlit_fraction_col
+0,trunk,NA,NA,1,NaT,NA,NA,NA,NA,0,NA,7,,NA
+1,scaffold,0,NA,1,NaT,NA,NA,NA,NA,0,NA,4,,NA
+2,branch,1,NA,0,NaT,NA,NA,NA,NA,37,NA,6,,NA
+3,GU,1,1,1,NaT,NA,NA,NA,NA,0,NA,6,,NA
+4,GU,3,1,0,NaT,NA,NA,NA,NA,2,NA,12,,NA
+5,GU,4,1,1,NaT,NA,NA,NA,NA,3,NA,6,,NA
+6,GU,5,1,1,2020-09-12,1,1,NA,520,3,NA,6,,NA
+7,GU,4,1,0,NaT,NA,NA,NA,NA,7,NA,7,,NA
+8,GU,3,1,0,NaT,NA,NA,NA,NA,0,NA,13,,NA
+9,GU,8,1,0,NaT,NA,NA,NA,NA,12,NA,5,,NA
+10,GU,8,1,1,NaT,NA,NA,NA,NA,4,NA,6,,NA
+11,GU,8,1,0,2020-09-12,1,1,NA,410,2,NA,5,,NA
