@@ -14,5 +14,5 @@ id,type,parent_id,scaffold_id,topology__is_apical,arch_dev__pot_flowering_date,a
 12,GU,2,1,0,NaT,NA,NA,NA,NA,5,NA,11,,NA
 13,GU,12,1,0,NaT,NA,NA,NA,NA,6,NA,7,,NA
 14,GU,12,1,1,NaT,NA,NA,NA,NA,9,NA,7,,NA
-15,GU,12,1,1,NaT,NA,NA,NA,NA,5,NA,6,,NA
-16,GU,15,1,1,NaT,NA,NA,NA,NA,1,NA,6,,NA
+15,GU,12,1,0,NaT,NA,NA,NA,NA,5,NA,6,,NA
+16,GU,15,1,0,NaT,NA,NA,NA,NA,1,NA,6,,NA

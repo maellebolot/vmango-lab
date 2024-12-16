@@ -8,7 +8,9 @@ from .vmlab import (
     get_vars_from_model,
     to_graph,
     to_dataframe,
-    check_graph
+    check_graph,
+    plot_graph,
+    to_weighted_graph
 )
 from . import constants, enums
 from .vmlab import DotDict
@@ -106,5 +108,7 @@ __all__ = [
     'get_vars_from_model',
     'to_graph',
     'to_dataframe',
-    'check_graph'
+    'check_graph',
+    'plot_graph',
+    'to_weighted_graph'
 ]
