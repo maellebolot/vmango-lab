@@ -17,8 +17,6 @@ from importlib import resources
 
 pgl.pglParserVerbose(False)
 
-print('reloaded')
-
 class DotDict(dict):
     def __init__(self, *args, **kwargs):
         super(DotDict, self).__init__(*args, **kwargs)
